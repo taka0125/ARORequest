@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86EC8BD11DDFF48300444661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC8BD01DDFF48300444661 /* AppDelegate.swift */; };
+		86EC8BD31DDFF48300444661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC8BD21DDFF48300444661 /* ViewController.swift */; };
+		86EC8BD61DDFF48300444661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC8BD41DDFF48300444661 /* Main.storyboard */; };
+		86EC8BD81DDFF48300444661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86EC8BD71DDFF48300444661 /* Assets.xcassets */; };
+		86EC8BDB1DDFF48300444661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC8BD91DDFF48300444661 /* LaunchScreen.storyboard */; };
+		CBEA5EFB7B151DC4DD51E49F /* Pods_ARORequestSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD59BD99E01FA227BBDF3225 /* Pods_ARORequestSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		198D3AFE62F97FD1FCE58DBC /* Pods-ARORequestSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample.debug.xcconfig"; sourceTree = "<group>"; };
+		2463EC461A67E5BA2B35D356 /* Pods-ARORequestSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample.release.xcconfig"; sourceTree = "<group>"; };
+		86EC8BCD1DDFF48300444661 /* ARORequestSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARORequestSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EC8BD01DDFF48300444661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86EC8BD21DDFF48300444661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86EC8BD51DDFF48300444661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86EC8BD71DDFF48300444661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86EC8BDA1DDFF48300444661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86EC8BDC1DDFF48300444661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD59BD99E01FA227BBDF3225 /* Pods_ARORequestSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARORequestSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86EC8BCA1DDFF48300444661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEA5EFB7B151DC4DD51E49F /* Pods_ARORequestSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		396936B8A255D257A0E57440 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD59BD99E01FA227BBDF3225 /* Pods_ARORequestSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86EC8BC41DDFF48200444661 = {
+			isa = PBXGroup;
+			children = (
+				86EC8BCF1DDFF48300444661 /* ARORequestSample */,
+				86EC8BCE1DDFF48300444661 /* Products */,
+				A787EEC529A3E1766668CB44 /* Pods */,
+				396936B8A255D257A0E57440 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		86EC8BCE1DDFF48300444661 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86EC8BCD1DDFF48300444661 /* ARORequestSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86EC8BCF1DDFF48300444661 /* ARORequestSample */ = {
+			isa = PBXGroup;
+			children = (
+				86EC8BD01DDFF48300444661 /* AppDelegate.swift */,
+				86EC8BD21DDFF48300444661 /* ViewController.swift */,
+				86EC8BD41DDFF48300444661 /* Main.storyboard */,
+				86EC8BD71DDFF48300444661 /* Assets.xcassets */,
+				86EC8BD91DDFF48300444661 /* LaunchScreen.storyboard */,
+				86EC8BDC1DDFF48300444661 /* Info.plist */,
+			);
+			path = ARORequestSample;
+			sourceTree = "<group>";
+		};
+		A787EEC529A3E1766668CB44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				198D3AFE62F97FD1FCE58DBC /* Pods-ARORequestSample.debug.xcconfig */,
+				2463EC461A67E5BA2B35D356 /* Pods-ARORequestSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86EC8BCC1DDFF48300444661 /* ARORequestSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86EC8BDF1DDFF48300444661 /* Build configuration list for PBXNativeTarget "ARORequestSample" */;
+			buildPhases = (
+				0FB10F020E909249F3E21B69 /* [CP] Check Pods Manifest.lock */,
+				86EC8BC91DDFF48300444661 /* Sources */,
+				86EC8BCA1DDFF48300444661 /* Frameworks */,
+				86EC8BCB1DDFF48300444661 /* Resources */,
+				439A6E4C408CE3A2690A0741 /* [CP] Embed Pods Frameworks */,
+				08D6397219551A5B0148090B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARORequestSample;
+			productName = ARORequestSample;
+			productReference = 86EC8BCD1DDFF48300444661 /* ARORequestSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86EC8BC51DDFF48200444661 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Takahiro Ooishi";
+				TargetAttributes = {
+					86EC8BCC1DDFF48300444661 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = W7992S87DQ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 86EC8BC81DDFF48200444661 /* Build configuration list for PBXProject "ARORequestSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86EC8BC41DDFF48200444661;
+			productRefGroup = 86EC8BCE1DDFF48300444661 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86EC8BCC1DDFF48300444661 /* ARORequestSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86EC8BCB1DDFF48300444661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EC8BDB1DDFF48300444661 /* LaunchScreen.storyboard in Resources */,
+				86EC8BD81DDFF48300444661 /* Assets.xcassets in Resources */,
+				86EC8BD61DDFF48300444661 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08D6397219551A5B0148090B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FB10F020E909249F3E21B69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		439A6E4C408CE3A2690A0741 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86EC8BC91DDFF48300444661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EC8BD31DDFF48300444661 /* ViewController.swift in Sources */,
+				86EC8BD11DDFF48300444661 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		86EC8BD41DDFF48300444661 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86EC8BD51DDFF48300444661 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86EC8BD91DDFF48300444661 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86EC8BDA1DDFF48300444661 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86EC8BDD1DDFF48300444661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86EC8BDE1DDFF48300444661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86EC8BE01DDFF48300444661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198D3AFE62F97FD1FCE58DBC /* Pods-ARORequestSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W7992S87DQ;
+				INFOPLIST_FILE = ARORequestSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.heartofsword.ARORequestSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		86EC8BE11DDFF48300444661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2463EC461A67E5BA2B35D356 /* Pods-ARORequestSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W7992S87DQ;
+				INFOPLIST_FILE = ARORequestSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.heartofsword.ARORequestSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86EC8BC81DDFF48200444661 /* Build configuration list for PBXProject "ARORequestSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86EC8BDD1DDFF48300444661 /* Debug */,
+				86EC8BDE1DDFF48300444661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86EC8BDF1DDFF48300444661 /* Build configuration list for PBXNativeTarget "ARORequestSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86EC8BE01DDFF48300444661 /* Debug */,
+				86EC8BE11DDFF48300444661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86EC8BC51DDFF48200444661 /* Project object */;
+}
