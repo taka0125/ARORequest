@@ -15,6 +15,12 @@ public protocol RequestStatusObservable {
   var requestStatus: BehaviorSubject<RequestState> { get }
 }
 
+public protocol RequestableDelegate {
+  func requestable(_ requestable:ApiRequestable, didSendRequest request: DataRequest)
+  func requestable(_ requestable:ApiRequestable, didUploadRequest request: UploadRequest)
+  func requestable(_ requestable:ApiRequestable, didReceiveResponse response: DataResponse<String>)
+}
+
 public protocol ApiRequestable {
   func request<ResponseParser: ResponseParserProtocol>(
     sessionManager: SessionManager,
@@ -23,7 +29,8 @@ public protocol ApiRequestable {
     parameters: Parameters?,
     parameterEncoding: ParameterEncoding,
     headers: HTTPHeaders?,
-    responseParser: ResponseParser)
+    responseParser: ResponseParser,
+    delegate: RequestableDelegate?)
     -> Observable<ResponseParser.SuccessResponse>
   
   func uploadRequest<ResponseParser: ResponseParserProtocol>(
@@ -33,7 +40,8 @@ public protocol ApiRequestable {
     to: URLConvertible,
     method: HTTPMethod,
     headers: HTTPHeaders?,
-    responseParser: ResponseParser)
+    responseParser: ResponseParser,
+    delegate: RequestableDelegate?)
     -> Observable<ResponseParser.SuccessResponse>
   
   func updateRequestStatus(_ requestState: RequestState)
@@ -47,7 +55,8 @@ public extension ApiRequestable {
     parameters: Parameters? = nil,
     parameterEncoding: ParameterEncoding = URLEncoding.default,
     headers: HTTPHeaders? = nil,
-    responseParser: ResponseParser)
+    responseParser: ResponseParser,
+    delegate: RequestableDelegate? = nil)
     -> Observable<ResponseParser.SuccessResponse>
   {
     return callApiTask(
@@ -57,7 +66,8 @@ public extension ApiRequestable {
       parameters: parameters,
       parameterEncoding: parameterEncoding,
       headers: headers,
-      responseParser: responseParser
+      responseParser: responseParser,
+      delegate: delegate
     )
     .flatMap { self.parseSuccessResponseTask(responseParser: responseParser, response: $0) }
     .do(
@@ -73,7 +83,8 @@ public extension ApiRequestable {
     to: URLConvertible,
     method: HTTPMethod = .post,
     headers: HTTPHeaders? = nil,
-    responseParser: ResponseParser)
+    responseParser: ResponseParser,
+    delegate: RequestableDelegate? = nil)
     -> Observable<ResponseParser.SuccessResponse>
   {
     return callUploadApiTask(
@@ -83,7 +94,8 @@ public extension ApiRequestable {
       to: to,
       method: method,
       headers: headers,
-      responseParser: responseParser
+      responseParser: responseParser,
+      delegate: delegate
     )
     .flatMap { self.parseSuccessResponseTask(responseParser: responseParser, response: $0) }
     .do(
@@ -102,13 +114,14 @@ public extension ApiRequestable {
     parameters: Parameters?,
     parameterEncoding: ParameterEncoding,
     headers: HTTPHeaders?,
-    responseParser: ResponseParser)
+    responseParser: ResponseParser,
+    delegate: RequestableDelegate?)
     -> Observable<DataResponse<String>>
   {
     return Observable.create { observer in
       self.updateRequestStatus(.requesting)
 
-      sessionManager.request(
+      let dataRequest = sessionManager.request(
         url,
         method: method,
         parameters: parameters,
@@ -117,8 +130,10 @@ public extension ApiRequestable {
       )
       .validate()
       .responseString(completionHandler: { response in
-        self.handleResponse(response: response, responseParser: responseParser, observer: observer)
+        self.handleResponse(response: response, responseParser: responseParser, observer: observer, delegate: delegate)
       })
+      
+      delegate?.requestable(self, didSendRequest: dataRequest)
 
       return Disposables.create()
     }
@@ -131,38 +146,47 @@ public extension ApiRequestable {
     to url: URLConvertible,
     method: HTTPMethod,
     headers: HTTPHeaders?,
-    responseParser: ResponseParser)
+    responseParser: ResponseParser,
+    delegate: RequestableDelegate?)
     -> Observable<DataResponse<String>>
   {
     return Observable.create { observer in
       self.updateRequestStatus(.requesting)
-      
-      sessionManager.upload(
-        multipartFormData: multipartFormData,
-        usingThreshold: usingThreshold,
-        to: url,
-        method: method,
-        headers: headers,
-        encodingCompletion: { (result) in
-          switch result {
-          case .success(request: let request, streamingFromDisk: _, streamFileURL: _):
-            request.validate()
-              .responseString(completionHandler: { response in
-                self.handleResponse(response: response, responseParser: responseParser, observer: observer)
-              })
-          case .failure(let error):
-            observer.onError(error)
-          }
+
+      let encodingCompletion:((SessionManager.MultipartFormDataEncodingResult) -> Void)? = { (result) in
+        switch result {
+        case .success(request: let request, streamingFromDisk: _, streamFileURL: _):
+          delegate?.requestable(self, didUploadRequest: request)
+          request.validate()
+            .responseString(completionHandler: { response in
+              self.handleResponse(response: response, responseParser: responseParser, observer: observer, delegate: delegate)
+            })
+        case .failure(let error):
+          observer.onError(error)
         }
-      )
+      }
+
+      do {
+        let urlRequest = try URLRequest(url: url, method: method, headers: headers)
+
+        sessionManager.upload(
+          multipartFormData: multipartFormData,
+          usingThreshold: usingThreshold,
+          with: urlRequest,
+          encodingCompletion: encodingCompletion
+        )
+      } catch {
+        DispatchQueue.main.async { encodingCompletion?(.failure(error)) }
+      }
       
       return Disposables.create()
     }
   }
   
-  private func handleResponse<ResponseParser: ResponseParserProtocol>(response: DataResponse<String>, responseParser: ResponseParser, observer: AnyObserver<DataResponse<String>>) {
+  private func handleResponse<ResponseParser: ResponseParserProtocol>(response: DataResponse<String>, responseParser: ResponseParser, observer: AnyObserver<DataResponse<String>>, delegate:RequestableDelegate?) {
     guard response.result.isSuccess else {
       if let result = responseParser.parseErrorResponse(response: response) {
+        delegate?.requestable(self, didReceiveResponse: response)
         observer.onError(result)
       } else {
         observer.onError(AROError.requestFailed(response: response))
@@ -171,6 +195,7 @@ public extension ApiRequestable {
       return
     }
     
+    delegate?.requestable(self, didReceiveResponse: response)
     observer.onNext(response)
     observer.onCompleted()
   }
