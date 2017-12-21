@@ -47,7 +47,8 @@ extension MyApiRequestable {
   func request<S: Mappable>(
     url: URLConvertible,
     method: HTTPMethod,
-    parameters: Parameters? = nil)
+    parameters: Parameters? = nil,
+    delegate: RequestableDelegate? = nil)
     -> Observable<S> {
     
     let sessionManager = SessionManager.default
@@ -60,7 +61,8 @@ extension MyApiRequestable {
       parameters: parameters,
       parameterEncoding: parameterEncoding(),
       headers: headers(),
-      responseParser: parser
+      responseParser: parser,
+      delegate: delegate
     )
   }
   
@@ -91,7 +93,9 @@ class ViewController: UITableViewController {
     case nullResponseExample
     case myApiRequestableSuccessExample
     case myApiRequestableErrorExample
-    
+    case myApiRequestableDelegateExample
+    case myApiRequestableDelegateErrorExample
+
     var text: String {
       switch self {
       case .successExample: return "Success Example"
@@ -99,10 +103,12 @@ class ViewController: UITableViewController {
       case .nullResponseExample: return "Null Response Example"
       case .myApiRequestableSuccessExample: return "My ApiRequestable Success Example"
       case .myApiRequestableErrorExample: return "My ApiRequestable Error Example"
+      case .myApiRequestableDelegateExample: return "My ApiRequestable Delegate Example"
+      case .myApiRequestableDelegateErrorExample: return "My ApiRequestable Delegate Error Example"
       }
     }
     
-    static var count: Int { return myApiRequestableErrorExample.rawValue + 1 }
+    static var count: Int { return myApiRequestableDelegateErrorExample.rawValue + 1 }
   }
   
   let disposeBag = DisposeBag()
@@ -143,6 +149,10 @@ class ViewController: UITableViewController {
       doMyApiRequestableSuccessExample()
     case .myApiRequestableErrorExample:
       doMyApiRequestableErrorExample()
+    case .myApiRequestableDelegateExample:
+      doMyApiRequestableDelegateExample()
+    case .myApiRequestableDelegateErrorExample:
+      doMyApiRequestableDelegateErrorExample()
     }
   }
 }
@@ -227,4 +237,38 @@ extension ViewController: MyApiRequestable {
       print(event)
     }.addDisposableTo(disposeBag)
   }
+  
+  fileprivate func doMyApiRequestableDelegateExample() {
+    let url = "http://localhost:4567/success.json"
+    
+    request(url: url, method: .get, parameters: nil, delegate: self).subscribe { (event: Event<SuccessResponse>) in
+      print(event)
+      }.addDisposableTo(disposeBag)
+  }
+  
+  fileprivate func doMyApiRequestableDelegateErrorExample() {
+    let url = "http://localhost:4567/error.json"
+    
+    request(url: url, method: .get, parameters: nil, delegate: self).subscribe { (event: Event<SuccessResponse>) in
+      print(event)
+      }.addDisposableTo(disposeBag)
+  }
 }
+
+extension ViewController: RequestableDelegate {
+  func requestable(_ requestable: ApiRequestable, didUploadRequest request: UploadRequest) {
+    print("called didUploadRequest")
+  }
+  
+  func requestable(_ requestable: ApiRequestable, didSendRequest request: DataRequest) {
+    print("called didSendRequest")
+    print(request.request!)
+  }
+  
+  func requestable(_ requestable: ApiRequestable, didReceiveResponse response: DataResponse<String>) {
+    print("called didReceiveResponse")
+    print(response.response!)
+  }
+  
+}
+
