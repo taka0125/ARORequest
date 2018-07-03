@@ -100,7 +100,6 @@
 				86EC8BCA1DDFF48300444661 /* Frameworks */,
 				86EC8BCB1DDFF48300444661 /* Resources */,
 				439A6E4C408CE3A2690A0741 /* [CP] Embed Pods Frameworks */,
-				08D6397219551A5B0148090B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -118,13 +117,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Takahiro Ooishi";
 				TargetAttributes = {
 					86EC8BCC1DDFF48300444661 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = W7992S87DQ;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 582LEGWZJK;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -160,34 +159,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08D6397219551A5B0148090B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0FB10F020E909249F3E21B69 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARORequestSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		439A6E4C408CE3A2690A0741 /* [CP] Embed Pods Frameworks */ = {
@@ -196,9 +183,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARORequest/ARORequest.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARORequest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -257,6 +253,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,6 +303,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -335,12 +333,15 @@
 			baseConfigurationReference = 198D3AFE62F97FD1FCE58DBC /* Pods-ARORequestSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W7992S87DQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 582LEGWZJK;
 				INFOPLIST_FILE = ARORequestSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.heartofsword.ARORequestSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "eacca50e-5a5a-4619-9609-294ba22523b4";
+				PROVISIONING_PROFILE_SPECIFIER = "ent-*";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -349,12 +350,15 @@
 			baseConfigurationReference = 2463EC461A67E5BA2B35D356 /* Pods-ARORequestSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W7992S87DQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 582LEGWZJK;
 				INFOPLIST_FILE = ARORequestSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.heartofsword.ARORequestSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "eacca50e-5a5a-4619-9609-294ba22523b4";
+				PROVISIONING_PROFILE_SPECIFIER = "ent-*";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
