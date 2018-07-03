@@ -1,6 +1,0 @@
-framework module ARORequest {
-  umbrella header "ARORequest-umbrella.h"
-
-  export *
-  module * { export * }
-}

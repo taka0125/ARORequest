@@ -9,11 +9,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 
   s.source_files = "Sources/**/*.swift"
 
-  s.dependency 'Alamofire', '~> 4.1'
-  s.dependency 'RxSwift', '~> 3.0'
-  s.dependency 'ObjectMapper', '~> 2.2.1'
+  s.dependency 'Alamofire', '~> 4.7.2'
+  s.dependency 'RxSwift', '~> 4.2.0'
+  s.dependency 'ObjectMapper', '~> 3.3.0'
 end

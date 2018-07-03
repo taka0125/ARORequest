@@ -1,25 +1,31 @@
 PODS:
-  - Alamofire (4.1.0)
-  - ARORequest (0.1.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 2.2.1)
-    - RxSwift (~> 3.0)
-  - ObjectMapper (2.2.1)
-  - RxSwift (3.0.1)
+  - Alamofire (4.7.2)
+  - ARORequest (0.2.0):
+    - Alamofire (~> 4.7.2)
+    - ObjectMapper (~> 3.3.0)
+    - RxSwift (~> 4.2.0)
+  - ObjectMapper (3.3.0)
+  - RxSwift (4.2.0)
 
 DEPENDENCIES:
   - ARORequest (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ObjectMapper
+    - RxSwift
 
 EXTERNAL SOURCES:
   ARORequest:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: e266cf991b933498df791e645e0d8ac294492153
-  ARORequest: e1414f1a583d17fb1620d3d0c4051e80dd6d1b2b
-  ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
-  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  ARORequest: 2d1561091601f4ed07ea7935e89d05438a4f48ff
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
 PODFILE CHECKSUM: 506ff7469f436e3a0e423b2205c7db14f5f234a4
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3
