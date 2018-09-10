@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ARORequest"
-  s.version = "0.2.0"
+  s.version = "0.3.0"
   s.summary = "Alamofire + RxSwift + ObjectMapper"
   s.homepage = "https://github.com/taka0125/ARORequest"
   s.license = "MIT"
