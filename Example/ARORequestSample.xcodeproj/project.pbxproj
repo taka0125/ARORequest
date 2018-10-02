@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52B2A485A0A53B4CAA768AA3 /* Pods_ARORequestSample_ARORequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F348079ACFE908F416ED74C8 /* Pods_ARORequestSample_ARORequestTests.framework */; };
 		86EC8BD11DDFF48300444661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC8BD01DDFF48300444661 /* AppDelegate.swift */; };
 		86EC8BD31DDFF48300444661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC8BD21DDFF48300444661 /* ViewController.swift */; };
 		86EC8BD61DDFF48300444661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC8BD41DDFF48300444661 /* Main.storyboard */; };
 		86EC8BD81DDFF48300444661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86EC8BD71DDFF48300444661 /* Assets.xcassets */; };
 		86EC8BDB1DDFF48300444661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC8BD91DDFF48300444661 /* LaunchScreen.storyboard */; };
 		CBEA5EFB7B151DC4DD51E49F /* Pods_ARORequestSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD59BD99E01FA227BBDF3225 /* Pods_ARORequestSample.framework */; };
+		D71ABA92216371C400D6E468 /* ARORequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71ABA91216371C400D6E468 /* ARORequestTests.swift */; };
+		FA44B1B8EC87E43081039AAA /* Pods_ARORequestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5867BF57CE8FAA551348BEAB /* Pods_ARORequestTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D71ABA94216371C400D6E468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86EC8BC51DDFF48200444661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86EC8BCC1DDFF48300444661;
+			remoteInfo = ARORequestSample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		198D3AFE62F97FD1FCE58DBC /* Pods-ARORequestSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample.debug.xcconfig"; sourceTree = "<group>"; };
 		2463EC461A67E5BA2B35D356 /* Pods-ARORequestSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample.release.xcconfig"; sourceTree = "<group>"; };
+		30505569DC8CEA0252376ACA /* Pods-ARORequestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestTests/Pods-ARORequestTests.release.xcconfig"; sourceTree = "<group>"; };
+		4BAB08F0225D5A676C2246EB /* Pods-ARORequestSample-ARORequestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestSample-ARORequestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestSample-ARORequestTests/Pods-ARORequestSample-ARORequestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5867BF57CE8FAA551348BEAB /* Pods_ARORequestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARORequestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EC8BCD1DDFF48300444661 /* ARORequestSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARORequestSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EC8BD01DDFF48300444661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EC8BD21DDFF48300444661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +41,12 @@
 		86EC8BD71DDFF48300444661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86EC8BDA1DDFF48300444661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86EC8BDC1DDFF48300444661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E52A473613CDE3A6340E69 /* Pods-ARORequestSample-ARORequestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestSample-ARORequestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestSample-ARORequestTests/Pods-ARORequestSample-ARORequestTests.release.xcconfig"; sourceTree = "<group>"; };
+		D71ABA8F216371C400D6E468 /* ARORequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARORequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71ABA91216371C400D6E468 /* ARORequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARORequestTests.swift; sourceTree = "<group>"; };
+		D71ABA93216371C400D6E468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F348079ACFE908F416ED74C8 /* Pods_ARORequestSample_ARORequestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARORequestSample_ARORequestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F98E0E61866D8415D9EF93E0 /* Pods-ARORequestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARORequestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARORequestTests/Pods-ARORequestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD59BD99E01FA227BBDF3225 /* Pods_ARORequestSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARORequestSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,6 +59,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D71ABA8C216371C400D6E468 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA44B1B8EC87E43081039AAA /* Pods_ARORequestTests.framework in Frameworks */,
+				52B2A485A0A53B4CAA768AA3 /* Pods_ARORequestSample_ARORequestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				FD59BD99E01FA227BBDF3225 /* Pods_ARORequestSample.framework */,
+				5867BF57CE8FAA551348BEAB /* Pods_ARORequestTests.framework */,
+				F348079ACFE908F416ED74C8 /* Pods_ARORequestSample_ARORequestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -52,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				86EC8BCF1DDFF48300444661 /* ARORequestSample */,
+				D71ABA90216371C400D6E468 /* ARORequestTests */,
 				86EC8BCE1DDFF48300444661 /* Products */,
 				A787EEC529A3E1766668CB44 /* Pods */,
 				396936B8A255D257A0E57440 /* Frameworks */,
@@ -62,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				86EC8BCD1DDFF48300444661 /* ARORequestSample.app */,
+				D71ABA8F216371C400D6E468 /* ARORequestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,8 +119,21 @@
 			children = (
 				198D3AFE62F97FD1FCE58DBC /* Pods-ARORequestSample.debug.xcconfig */,
 				2463EC461A67E5BA2B35D356 /* Pods-ARORequestSample.release.xcconfig */,
+				F98E0E61866D8415D9EF93E0 /* Pods-ARORequestTests.debug.xcconfig */,
+				30505569DC8CEA0252376ACA /* Pods-ARORequestTests.release.xcconfig */,
+				4BAB08F0225D5A676C2246EB /* Pods-ARORequestSample-ARORequestTests.debug.xcconfig */,
+				94E52A473613CDE3A6340E69 /* Pods-ARORequestSample-ARORequestTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D71ABA90216371C400D6E468 /* ARORequestTests */ = {
+			isa = PBXGroup;
+			children = (
+				D71ABA91216371C400D6E468 /* ARORequestTests.swift */,
+				D71ABA93216371C400D6E468 /* Info.plist */,
+			);
+			path = ARORequestTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,13 +158,33 @@
 			productReference = 86EC8BCD1DDFF48300444661 /* ARORequestSample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D71ABA8E216371C400D6E468 /* ARORequestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D71ABA98216371C400D6E468 /* Build configuration list for PBXNativeTarget "ARORequestTests" */;
+			buildPhases = (
+				5FC2A22C40F21AE50C789888 /* [CP] Check Pods Manifest.lock */,
+				D71ABA8B216371C400D6E468 /* Sources */,
+				D71ABA8C216371C400D6E468 /* Frameworks */,
+				D71ABA8D216371C400D6E468 /* Resources */,
+				8D52401122D834272BC1C311 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D71ABA95216371C400D6E468 /* PBXTargetDependency */,
+			);
+			name = ARORequestTests;
+			productName = ARORequestTests;
+			productReference = D71ABA8F216371C400D6E468 /* ARORequestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		86EC8BC51DDFF48200444661 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Takahiro Ooishi";
 				TargetAttributes = {
@@ -124,6 +192,10 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582LEGWZJK;
 						ProvisioningStyle = Manual;
+					};
+					D71ABA8E216371C400D6E468 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -141,6 +213,7 @@
 			projectRoot = "";
 			targets = (
 				86EC8BCC1DDFF48300444661 /* ARORequestSample */,
+				D71ABA8E216371C400D6E468 /* ARORequestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -153,6 +226,13 @@
 				86EC8BDB1DDFF48300444661 /* LaunchScreen.storyboard in Resources */,
 				86EC8BD81DDFF48300444661 /* Assets.xcassets in Resources */,
 				86EC8BD61DDFF48300444661 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D71ABA8D216371C400D6E468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +263,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ARORequest/ARORequest.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -198,7 +278,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARORequestSample/Pods-ARORequestSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC2A22C40F21AE50C789888 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARORequestSample-ARORequestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D52401122D834272BC1C311 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARORequestSample-ARORequestTests/Pods-ARORequestSample-ARORequestTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARORequest/ARORequest.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARORequest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARORequestSample-ARORequestTests/Pods-ARORequestSample-ARORequestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -213,7 +343,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D71ABA8B216371C400D6E468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D71ABA92216371C400D6E468 /* ARORequestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D71ABA95216371C400D6E468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86EC8BCC1DDFF48300444661 /* ARORequestSample */;
+			targetProxy = D71ABA94216371C400D6E468 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		86EC8BD41DDFF48300444661 /* Main.storyboard */ = {
@@ -282,6 +428,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -324,6 +471,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -341,7 +489,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eacca50e-5a5a-4619-9609-294ba22523b4";
 				PROVISIONING_PROFILE_SPECIFIER = "ent-*";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -358,7 +505,65 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eacca50e-5a5a-4619-9609-294ba22523b4";
 				PROVISIONING_PROFILE_SPECIFIER = "ent-*";
-				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		D71ABA96216371C400D6E468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BAB08F0225D5A676C2246EB /* Pods-ARORequestSample-ARORequestTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ARORequestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dena.ARORequestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D71ABA97216371C400D6E468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94E52A473613CDE3A6340E69 /* Pods-ARORequestSample-ARORequestTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ARORequestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dena.ARORequestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -379,6 +584,15 @@
 			buildConfigurations = (
 				86EC8BE01DDFF48300444661 /* Debug */,
 				86EC8BE11DDFF48300444661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D71ABA98216371C400D6E468 /* Build configuration list for PBXNativeTarget "ARORequestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D71ABA96216371C400D6E468 /* Debug */,
+				D71ABA97216371C400D6E468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

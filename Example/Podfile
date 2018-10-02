@@ -1,7 +1,12 @@
 platform :ios, '8.0'
+swift_version = 4.2
+use_frameworks!
 
 target 'ARORequestSample' do
-  use_frameworks!
-
   pod 'ARORequest', path: '../'
 end
+
+target 'ARORequestTests' do
+  pod 'ARORequest', path: '../'
+end
+

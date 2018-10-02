@@ -10,8 +10,8 @@ import Alamofire
 import ObjectMapper
 
 public protocol ResponseParserProtocol {
-  associatedtype SuccessResponse: Mappable
-  associatedtype ErrorResponse: Mappable, Error
+  associatedtype SuccessResponse: AROMappable
+  associatedtype ErrorResponse: AROMappable, Error
   
   func parseSuccessResponse(response: DataResponse<String>) -> SuccessResponse?
   func parseErrorResponse(response: DataResponse<String>) -> ErrorResponse?
@@ -20,19 +20,19 @@ public protocol ResponseParserProtocol {
 public extension ResponseParserProtocol {
   public func parseSuccessResponse(response: DataResponse<String>) -> SuccessResponse? {
     guard let value = response.result.value else { return nil }
-    guard let result = Mapper<SuccessResponse>().map(JSONString: value) else { return nil }
+    guard let result = SuccessResponse.decode(JSONString: value) else { return nil }
     return result
   }
   
   public func parseErrorResponse(response: DataResponse<String>) -> ErrorResponse? {
     guard let data = response.data else { return nil }
     guard let JSONString = String(data: data, encoding: .utf8) else { return nil }
-    guard let result = Mapper<ErrorResponse>().map(JSONString: JSONString) else { return nil }
+    guard let result = ErrorResponse.decode(JSONString: JSONString) else { return nil }
     return result
   }
 }
 
-public struct NullResponse: Mappable {
+public struct NullResponse: AROMappable, Mappable {
   public init?(map: Map) {
   }
   
@@ -40,7 +40,7 @@ public struct NullResponse: Mappable {
   }
 }
 
-public struct NullErrorResponse: Mappable, Error {
+public struct NullErrorResponse: AROMappable, Mappable, Error {
   public init?(map: Map) {
   }
   
@@ -48,7 +48,7 @@ public struct NullErrorResponse: Mappable, Error {
   }
 }
 
-public struct NullSuccessResponseParser<E: Mappable & Error>: ResponseParserProtocol {
+public struct NullSuccessResponseParser<E: AROMappable & Error>: ResponseParserProtocol {
   public typealias SuccessResponse = NullResponse
   public typealias ErrorResponse = E
 
@@ -56,7 +56,7 @@ public struct NullSuccessResponseParser<E: Mappable & Error>: ResponseParserProt
   }
 }
 
-public struct NullErrorResponseParser<S: Mappable>: ResponseParserProtocol {
+public struct NullErrorResponseParser<S: AROMappable>: ResponseParserProtocol {
   public typealias SuccessResponse = S
   public typealias ErrorResponse = NullErrorResponse
   
@@ -72,7 +72,7 @@ public struct NullResponseParser: ResponseParserProtocol {
   }
 }
 
-public struct DefaultResponseParser<S: Mappable, E: Mappable & Error>: ResponseParserProtocol {
+public struct DefaultResponseParser<S: AROMappable, E: AROMappable & Error>: ResponseParserProtocol {
   public typealias SuccessResponse = S
   public typealias ErrorResponse = E
 

@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
-  - ARORequest (0.2.0):
+  - ARORequest (0.3.0):
     - Alamofire (~> 4.7.2)
     - ObjectMapper (~> 3.3.0)
     - RxSwift (~> 4.2.0)
@@ -22,10 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  ARORequest: 2d1561091601f4ed07ea7935e89d05438a4f48ff
+  ARORequest: 76a0e6bae8a3a31ddbddbe566a7be702c76ffca3
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 506ff7469f436e3a0e423b2205c7db14f5f234a4
+PODFILE CHECKSUM: c645b1fb9e645b75f4e57ec7cbe336f6eb052a97
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

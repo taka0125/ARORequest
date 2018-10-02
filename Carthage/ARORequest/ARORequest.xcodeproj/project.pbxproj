@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D75C504B21637C9A00E94114 /* AROMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C504A21637C9A00E94114 /* AROMappable.swift */; };
 		D7B8A4EC1FCEE4E700AA86D2 /* ARORequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B8A4EA1FCEE4E700AA86D2 /* ARORequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7B8A4F61FCEE53E00AA86D2 /* AROError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8A4F21FCEE53E00AA86D2 /* AROError.swift */; };
 		D7B8A4F71FCEE53E00AA86D2 /* ApiRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8A4F31FCEE53E00AA86D2 /* ApiRequestable.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D75C504A21637C9A00E94114 /* AROMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AROMappable.swift; path = ../../../Sources/AROMappable.swift; sourceTree = "<group>"; };
 		D7B8A4E71FCEE4E700AA86D2 /* ARORequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ARORequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B8A4EA1FCEE4E700AA86D2 /* ARORequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARORequest.h; sourceTree = "<group>"; };
 		D7B8A4EB1FCEE4E700AA86D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		D7B8A4E91FCEE4E700AA86D2 /* ARORequest */ = {
 			isa = PBXGroup;
 			children = (
+				D75C504A21637C9A00E94114 /* AROMappable.swift */,
 				D7B8A4F31FCEE53E00AA86D2 /* ApiRequestable.swift */,
 				D7B8A4F21FCEE53E00AA86D2 /* AROError.swift */,
 				D7B8A4F51FCEE53E00AA86D2 /* RequestState.swift */,
@@ -168,6 +171,7 @@
 				D7B8A4F61FCEE53E00AA86D2 /* AROError.swift in Sources */,
 				D7B8A4F81FCEE53E00AA86D2 /* ResponseParser.swift in Sources */,
 				D7B8A4F91FCEE53E00AA86D2 /* RequestState.swift in Sources */,
+				D75C504B21637C9A00E94114 /* AROMappable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ import Alamofire
 import RxSwift
 import ObjectMapper
 
-struct SuccessResponse: Mappable {
+struct SuccessResponse: AROMappable, Mappable {
   var id: Int = 0
   var uuid: String = ""
   
@@ -25,7 +25,7 @@ struct SuccessResponse: Mappable {
   }
 }
 
-struct ErrorResponse: Mappable, Error {
+struct ErrorResponse: AROMappable, Mappable, Error {
   var title: String = ""
   var message: String = ""
   
@@ -44,7 +44,7 @@ protocol MyApiRequestable: ApiRequestable {
 }
 
 extension MyApiRequestable {
-  func request<S: Mappable>(
+  func request<S: AROMappable>(
     url: URLConvertible,
     method: HTTPMethod,
     parameters: Parameters? = nil,
