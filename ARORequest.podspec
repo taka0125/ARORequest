@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "ARORequest"
-  s.version = "0.3.0"
+  s.version = "0.4.0"
   s.summary = "Alamofire + RxSwift + ObjectMapper"
   s.homepage = "https://github.com/taka0125/ARORequest"
   s.license = "MIT"
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "Sources/**/*.swift"
 
-  s.dependency 'Alamofire', '~> 4.7.2'
-  s.dependency 'RxSwift', '~> 4.2.0'
-  s.dependency 'ObjectMapper', '~> 3.3.0'
+  s.dependency 'Alamofire', '~> 4.8.1'
+  s.dependency 'RxSwift', '~> 4.4.2'
+  s.dependency 'ObjectMapper', '~> 3.4.2'
 end
